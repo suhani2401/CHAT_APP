@@ -1,0 +1,75 @@
+.info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: scroll;
+}
+.info .option .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info .option .title img {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(17, 25, 40, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.info .option .photos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.option .photos .photoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.option .photos .photoItem .photoDetail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.option .photos .photoItem .photoDetail img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.option .photos .photoItem .photoDetail span {
+  font-size: 14px;
+  color: lightgray;
+  font-weight: 300;
+}
+.option .photos .photoItem .icon {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(17, 25, 40, 0.3);
+  padding: 10px;
+  border-radius: 43%;
+  cursor: pointer;
+}
+.info .btn {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.info .btn button {
+  padding: 15px;
+  background-color: rgba(230, 74, 105, 0.553);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.info button:hover {
+  background-color: rgba(220, 20, 60, 0.796);
+}
+.info .btn .logout {
+  padding: 10px;
+  background-color: #1a73e8;
+}
