@@ -4,24 +4,28 @@ const Conversation = require("../models/conversation");
 const Message = require("../models/message");
 
 module.exports.sendMessage_get = async (req, res) => {
-  try {
-    const { id: userToChatId } = req.params;
-    const senderId = req.user._id;
+	try {
+		const { id: userToChatId } = req.params;
+		const senderId = req.user._id;
 
-    const conversation = await Conversation.findOne({
+		const conversation = await Conversation.find({
       participants: { $all: [senderId, userToChatId] },
-    }).populate("messages");
+    });
+    await conversation.populate('messages');// NOT REFERENCE BUT ACTUAL MESSAGES
+  
+    console.log(conversation);
+		// if (!Conversation) return res.status(200).json([]);
+   
+		const messages = conversation.messages;
+    console.log(messages);
 
-    if (!conversation) return res.status(201).json([]);
-
-    const messages = conversation.messages;
-    // console.log(conversation.messages);
-    return res.status(201).json(messages);
-  } catch (error) {
-    console.log("Error in getMessage controller", error.message);
-    return res.status(500).json({ error: "Internal Server Error" });
-  }
+		res.status(200).send(messages);
+	} catch (error) {
+		console.log("Error in getMessages controller: ", error.message);
+		res.status(500).json({ error: "Internal server error" });
+	}
 };
+
 module.exports.sendMessage_post = async (req, res) => {
   try {
     const { message } = req.body;

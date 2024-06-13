@@ -1,13 +1,12 @@
-import Chat from "./components/chat/chat";
-import Detail from "./components/detail/detail";
-import List from "./components/list/list";
+import { Router } from "express";
+import Home from "./pages/home/home";
 
 const App = () => {
   return (
     <div className="container">
-      <List />
-      <Chat />
-      <Detail />
+      <Router>
+        <Home />
+      </Router>
     </div>
   );
 };
