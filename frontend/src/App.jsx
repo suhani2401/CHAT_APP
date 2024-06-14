@@ -1,12 +1,18 @@
-import { Router } from "express";
-import Home from "./pages/home/home";
+import { Route, Router } from "express";
+import Chat from "./components/chat/chat";
+import Detail from "./components/detail/detail";
+import List from "./components/list/list";
+import Login from "./components/login/login";
 
 const App = () => {
+
+  const user = false
+
   return (
     <div className="container">
-      <Router>
-        <Home />
-      </Router>
+          <List/>
+          <Chat/>
+          <Detail/>
     </div>
   );
 };

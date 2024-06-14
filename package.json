@@ -19,6 +19,7 @@
     "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.1",
+    "safe-buffer": "^5.2.1",
     "socket.io": "^4.7.5"
   },
   "devDependencies": {
