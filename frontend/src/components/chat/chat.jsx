@@ -24,7 +24,7 @@ function Chat() {
           <img src="./avatar.png" alt="" />
           <div className="texts">
             <span>Twisha Mody</span>
-            <p>When it comes to writers' block,</p>
+            <p>When it comes to writers block,</p>
           </div>
         </div>
         <div className="icons">
